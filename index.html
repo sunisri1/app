@@ -1,0 +1,56 @@
+<!Doctype HTML>
+<head>
+
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui" />
+<title>BMI</title>
+<script type="text/javascript">
+
+function bmifunc()
+{
+var weight = document.getElementById('weight').value;
+var height = document.getElementById('height').value;
+
+
+BMI.innerHTML=Math.round(weight/(height*height*.001));
+
+}
+</script>
+
+</head>
+<body style="
+    background-color: #dcd2de;">
+<form action="" name="bmi" method="post" id="bmif" >
+
+<fieldset>
+<div>
+<label>Enter your weight (in kgs)</label>
+<input style="    padding-top: 5px;  padding-bottom: 5px; width: 100%;" type="number" placeholder="60" id="weight" required/>
+</div>
+<br>
+<div>
+<label>Enter your height</label>
+<input style="    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+" type="number" placeholder="160" id="height" required/>
+</div>
+<br>
+<div>
+<input style="padding-bottom: 5px;
+    padding-top: 5px;
+    width: 100%;
+    background: #FFEB3B;
+    border: 1px;" type="button" value="CALCULATE" onClick="bmifunc()" />
+</div>
+<br>
+<div>
+BMI: <label id="BMI"></label>
+</div>
+
+</fieldset>
+
+</form>
+</body>
+</html>
+
